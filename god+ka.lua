@@ -4,7 +4,8 @@
 
     Made by fireztron @ v3rm
 ]]
-
+warn("patched wait for update")
+--[[
 local mt = getrawmetatable(game) 
 local oldnamecall = mt.__namecall
 setreadonly(mt, false)
@@ -95,3 +96,4 @@ if remoteName and remoteName.Value ~= "NOT_LOADED_YET" then
         wait(.1)
     end
 end
+]]
