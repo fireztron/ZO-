@@ -16,7 +16,7 @@ if remoteName and remoteName.Value ~= "NOT_LOADED_YET" then
             if katana and katana:FindFirstChild("Weapon") then
                 --// autoblock (god mode)
                 local args = {
-                    [1] = "Parry",
+                    [1] = "Block",
                     [2] = katana,
                     [3] = true
                 }
@@ -39,6 +39,6 @@ if remoteName and remoteName.Value ~= "NOT_LOADED_YET" then
                 ToggleR:FireServer(unpack(args))
             end
         end
-        RS.Heartbeat:Wait()
+        wait(.1)
     end
 end
