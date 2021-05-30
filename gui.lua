@@ -5,6 +5,9 @@
     Made by fireztron @ v3rm
 ]]
 
+warn("patched and im too lazy to cat and mouse update, u can figure out how to do it on ur own")
+
+--[[
 --// For Non-Synapse Users (credits to egg salad)
 if not pcall(function() return syn.protect_gui end) then
     syn = {}
@@ -149,3 +152,4 @@ if WeaponR then
         wait(.1)
     end
 end
+]]
