@@ -4,7 +4,7 @@
 
     Made by fireztron @ v3rm
 ]]
-warn("use gui its better :D")
+warn("use gui its better :D (check v3rm dummy")
 --[[
 local mt = getrawmetatable(game) 
 local oldnamecall = mt.__namecall
