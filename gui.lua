@@ -79,11 +79,22 @@ local RS = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ToggleR = ReplicatedStorage.ToggleRun
-local remoteName = ReplicatedStorage:WaitForChild("General"):WaitForChild("Config"):WaitForChild("wrn"):FindFirstChildOfClass("StringValue")
 
-if remoteName and remoteName.Value ~= "NOT_LOADED_YET" then 
-    local WeaponR = ReplicatedStorage:WaitForChild(remoteName.Value)
+local WeaponR
+local first = false
+for i,v in pairs(getgc()) do
+    if type(v)=="function" and getfenv(v).script==game:GetService("ReplicatedStorage"):WaitForChild("WeaponModules"):WaitForChild("Weapon") then
+        local x = debug.getupvalues(v)
+        for a,b in pairs(x) do
+            if a == 9 and not first then
+                first = true
+                WeaponR = b
+            end
+        end
+    end
+end
 
+if WeaponR then 
     --// Always be parrying
     do
         local LPChar = LocalPlayer.Character
