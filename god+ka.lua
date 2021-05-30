@@ -4,7 +4,7 @@
 
     Made by fireztron @ v3rm
 ]]
-warn("patched wait for update")
+warn("use gui its better :D")
 --[[
 local mt = getrawmetatable(game) 
 local oldnamecall = mt.__namecall
@@ -41,7 +41,7 @@ local RS = game:GetService("RunService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local ToggleR = ReplicatedStorage.ToggleRun
-local remoteName = ReplicatedStorage:WaitForChild("General"):WaitForChild("Config"):WaitForChild("wrn"):FindFirstChildOfClass("StringValue")
+local remoteName = ReplicatedStorage:WaitForChild("General"):WaitForChild("Config"):WaitForChild("wrnd"):FindFirstChildOfClass("StringValue")
 
 if remoteName and remoteName.Value ~= "NOT_LOADED_YET" then 
     local WeaponR = ReplicatedStorage:WaitForChild(remoteName.Value)
